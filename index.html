@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<!-- HTML-based presentation template for in-browser display.
+     Uses reveal.js (https://github.com/hakimel/reveal.js/) at version 3.2.0 -->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        
+        <!-- basic metadata -->
+        <title>reveal.js - Template</title>
+        <meta name="description" content="TODO: Describe what this presentation is about.">
+        <meta name="author" content="TODO: Author Name">
+        
+        <!-- tell some browsers how to display this presentation -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+        
+        <!-- load basic style and a theme -->
+        <link rel="stylesheet" href="reveal.js/css/reveal.css">
+	<!-- TODO: pick a theme -->
+        <link rel="stylesheet" href="reveal.js/css/theme/moon.css" id="theme">
+        <!-- separate stylesheets with the fonts, banner and logo styles -->
+        <link rel="stylesheet" href="css/banner.css">
+        <!-- extra stylesheet for syntax highlighting colors -->
+        <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+        
+        <!-- add support for earlier versions of Internet Explorer -->
+        <!--[if lt IE 9]>
+        <script src="reveal.js/lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="reveal">
+        
+            <!-- where the reveal.js slides will go -->
+            <div class="slides">
+                
+                <!-- TODO: modify slides -->
+                <!----- SLIDE 1 ----->
+                <section data-transition="concave-in convex-out">
+                  <h1>Slide 1</h1>
+                  <h3>Something discussed here!</h3>
+                </section>
+                
+                
+                <!----- SLIDE 2 ----->
+                <section data-transition="concave-in convex-out"
+                         data-background="#555599">
+                    <h1>Some <code>code</code></h1>
+                    <p>Have a look!</p>
+                    <ul>
+                      <li class="fragment" data-fragment-index="0">ain't</li>
+                      <li class="fragment" data-fragment-index="1"><strong>it</strong></li>
+                      <li class="fragment" data-fragment-index="2">neat?</li>
+                    </ul>
+                    <!-- any whitespaces in preformatted code will show in the slides -->
+                    <pre><code class="golang" data-trim>
+package main
+
+import "os"
+
+func main() {
+  return;
+}
+                    </code></pre>
+                </section>
+                
+                
+                <!----- SLIDE 3 ----->
+                <section data-transition="concave-in convex-out">
+                   <h3>SVG FTW</h3>
+                   <img style="background-color: white"
+                        src="./img/uml.svg">
+                   <p>Use ALT+Click to zoom in/out</p>
+                </section>
+                
+                
+		        <!----- SLIDE 4 ----->
+                <section data-background-iframe="http://www.gnu.org/home.en.html" 
+                         data-transition="concave-in convex-out">
+		          <aside class="notes">
+                    Speaker note: Oh btw, here's a website!
+                  </aside>
+                </section>
+
+		
+                <!----- SLIDE 5 ----->
+                <section data-transition="concave-in convex-out">
+                  <h1>Slide 3</h1>
+                  <p>More slides!</p>    
+		          <blockquote>
+		            "Use the source, Luke." --Albus Dumbledore
+		          </blockquote>
+                </section>
+
+		
+		        <!----- SLIDE 6 ----->
+                <section data-transition="concave-in convex-out"
+			             data-background="#cccc11">
+		          <h1  style="color: red">Fin</h1>
+		          <p  style="color: white">Thank you!</p>
+                </section>
+                
+            </div>
+            <!-- include custom banner and logo -->
+            <div id="bottom-banner">
+                <img id="banner-logo" src="img/arch-logo_white.png">
+                <span>Arch Linux Example Banner</span>
+            </div>
+        </div>
+        <script src="reveal.js/lib/js/head.min.js"></script>
+        <script src="reveal.js/js/reveal.js"></script>
+        <script>
+            Reveal.initialize({
+                controls: false,
+                progress: true,
+                history: true,
+                center: true,
+                showNotes: true,
+                slideNumber: 'c/t',
+
+                // Optional extensions
+                dependencies: [
+                    { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    // { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    // { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'reveal.js/plugin/highlight/highlight.js', async: false, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+                    { src: 'reveal.js/plugin/notes/notes.js' }
+                ]
+            });
+        </script>
+        <!-- support printing and PDF exports. 
+             requires Chrome browser to work. -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+    </body>
+</html>
